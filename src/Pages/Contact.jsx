@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaPaperPlane, FaArrowRight, FaInstagram } from "react-icons/fa";
 import { MdOutlineDownloadDone } from "react-icons/md";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { toast } from 'react-hot-toast';
 
 const Contact = () => {
