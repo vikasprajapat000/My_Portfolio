@@ -68,10 +68,10 @@ const Contact = () => {
         // Send email using EmailJS
         emailjs
             .sendForm(
-                import.meta.env.VITE_SERVICE_ID,
-                import.meta.env.VITE_TEMPLATE_ID,
+                'service_q34yism',
+                'template_aaj0itc',
                 event.target,
-                import.meta.env.VITE_PUBLIC_KEY
+                'PAY-sNimUuJj2QHA2'
             )
             .then(
                 () => {
@@ -206,7 +206,7 @@ const Contact = () => {
                                     <h3 className="text-lg font-semibold text-white mb-1">Whatsapp</h3>
                                     <p className="text-gray-300">Send Hi</p>
                                     <a 
-                                        href="https://wa.me/916350086739?text=Hello%20I%20Am%20Vikas%20Prajjapat%20How%20I%20Can%20Help%20you"
+                                        href="https://wa.me/916350086738?text=Hello%20I%20Am%20Vikas%20Prajjapat%20How%20I%20Can%20Help%20you"
 
                                         target="_blank"
                                         rel="noopener noreferrer"
