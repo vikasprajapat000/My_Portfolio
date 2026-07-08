@@ -18,7 +18,7 @@ const Education = () => {
             period: "2022 - 2023",
             qualification: "12th: 71.20%",
             description: "Studied class 11th-12th",
-            image: "/School.png",
+            image: "/12thSchool.png",
             icon: <FaSchool className="text-white text-2xl" />
         },
         {
