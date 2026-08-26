@@ -5,48 +5,64 @@ import { FaCertificate, FaChevronLeft, FaChevronRight, FaExpand } from "react-ic
 
 const Certificates = () => {
     const [selectedCertificate, setSelectedCertificate] = useState(null);
-    
+
     // Certificate data
     const certificates = [
-        { 
-            id: 1, 
-            src: "/VikasAWS.png", 
+        {
+            id: 1,
+            src: "/VikasAWS.png",
             title: "AWS Certificate",
             issuer: "AWS Academy",
             date: "September 2025",
             skills: ["Understanding of Cloud"]
         },
-        { 
-            id: 2, 
-            src: "/VikasNPTL.png", 
+        {
+            id: 2,
+            src: "/VikasNPTL.png",
             title: "Computer Networking Certificate",
             issuer: "NPTEL - IIT Kharagpur",
             date: "June 2025",
             skills: ["Networking", "Routing", "TCP/IP", "Security"]
         },
         {
-            id: 3, 
-            src: "VikasGMAIL.png", 
+            id: 3,
+            src: "VikasGMAIL.png",
             title: "GMAIL Certificate",
             issuer: "Google Cloud",
             date: "August 2024",
             skills: ["proffessional in  GMAIL "]
         },
-        { 
-            id: 4, 
-            src: "VikasSMART.png", 
+        {
+            id: 4,
+            src: "VikasSMART.png",
             title: "DSA Coding Certificate",
             issuer: "Smart Interview",
             date: "july 2025",
             skills: ["Data Structure and Algoritham"]
         },
-        { 
-            id: 5, 
-            src: "/IBMCertificate.png", 
+        {
+            id: 5,
+            src: "/IBMCertificate.png",
             title: "AI Fundamental",
             issuer: " Cisco Networking Academy ",
             date: "September 2025",
             skills: ["AI Fundamental"]
+        },
+        {
+            id: 6,
+            src: "/CampusCrew.png",
+            title: "Campus Crew Certificate",
+            issuer: "Campus Crew",
+            date: "2026",
+            skills: ["Leadership", "Community Building"]
+        },
+        {
+            id: 7,
+            src: "/DataAnalytics.png",
+            title: "Data Analytics Certificate",
+            issuer: "Data Analytics",
+            date: "2026",
+            skills: ["Data Analytics", "Data Analysis"]
         }
     ];
 
@@ -65,11 +81,11 @@ const Certificates = () => {
         borderRadius: '50%',
         transition: 'all 0.3s ease',
     };
-    
+
     const CustomPrevArrow = (onClickHandler, hasPrev) => (
-        <button 
-            type="button" 
-            onClick={onClickHandler} 
+        <button
+            type="button"
+            onClick={onClickHandler}
             className={`${!hasPrev ? 'opacity-30' : 'opacity-100 hover:bg-orange-600'}`}
             style={{ ...arrowStyles, left: 15 }}
             aria-label="Previous slide"
@@ -78,11 +94,11 @@ const Certificates = () => {
             <FaChevronLeft className="text-white" />
         </button>
     );
-    
+
     const CustomNextArrow = (onClickHandler, hasNext) => (
-        <button 
+        <button
             type="button"
-            onClick={onClickHandler} 
+            onClick={onClickHandler}
             className={`${!hasNext ? 'opacity-30' : 'opacity-100 hover:bg-orange-600'}`}
             style={{ ...arrowStyles, right: 15 }}
             aria-label="Next slide"
@@ -97,7 +113,7 @@ const Certificates = () => {
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-pink-500/10 to-orange-500/5 blur-3xl rounded-full"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-orange-500/10 to-red-500/5 blur-3xl rounded-full"></div>
-            
+
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 {/* Section header */}
                 <div className="flex flex-col items-center mb-16 reveal">
@@ -139,12 +155,12 @@ const Certificates = () => {
                                                 alt={certificate.title}
                                                 className="rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-105"
                                             />
-                                            
+
                                             {/* Overlay with expand button */}
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                                                 <h3 className="text-white text-xl font-bold mb-2">{certificate.title}</h3>
                                                 <p className="text-gray-300 text-sm mb-2">Issued by: {certificate.issuer}</p>
-                                                <button 
+                                                <button
                                                     className="self-center mt-2 bg-white/20 backdrop-blur-sm border border-white/30 p-2 rounded-full hover:bg-white/30 transition-colors duration-300"
                                                     onClick={(e) => {
                                                         e.stopPropagation();
@@ -174,13 +190,13 @@ const Certificates = () => {
                             <p className="text-gray-400">
                                 From full stack development to cybersecurity, each certificate showcases my ability to learn, adapt, and apply my skills effectively. These credentials not only validate my technical expertise but also my passion for growth and innovation.
                             </p>
-                            
+
                             {/* Skills badges */}
                             <div className="pt-4">
                                 <h4 className="text-lg font-medium text-white mb-3">Key Certified Skills:</h4>
                                 <div className="flex flex-wrap gap-2">
                                     {["AWS Academy", "Computer Networking", "Theory of Computation", "Data Structures", "Algorithms"].map((skill, i) => (
-                                        <span 
+                                        <span
                                             key={i}
                                             className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-pink-500/20 to-orange-600/20 border border-pink-500/30 text-gray-200"
                                         >
@@ -193,19 +209,19 @@ const Certificates = () => {
                     </div>
                 </div>
             </div>
-            
+
             {/* Certificate Modal */}
             {selectedCertificate && (
                 <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={() => setSelectedCertificate(null)}>
                     <div className="relative max-w-4xl w-full bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10" onClick={(e) => e.stopPropagation()}>
-                        <button 
+                        <button
                             className="absolute -top-4 -right-4 bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center z-10"
                             onClick={() => setSelectedCertificate(null)}
                             aria-label="Close"
                         >
                             ✕
                         </button>
-                        <img 
+                        <img
                             src={selectedCertificate.src}
                             alt={selectedCertificate.title}
                             className="w-full rounded-lg"

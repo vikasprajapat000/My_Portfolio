@@ -167,6 +167,14 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a 
+                                    href="#Internship" 
+                                    className="text-gray-400 hover:text-orange-400 transition-colors duration-300 inline-flex items-center hover:translate-x-1 transform"
+                                >
+                                    <span className="mr-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span> Internship
+                                </a>
+                            </li>
+                            <li>
+                                <a 
                                     href="#Contact" 
                                     className="text-gray-400 hover:text-orange-400 transition-colors duration-300 inline-flex items-center hover:translate-x-1 transform"
                                 >

@@ -8,6 +8,7 @@ import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import Footer from "./Components/Footer";
 import Certificates from "./Components/Certificates";
+import Internship from "./Components/Internship";
 import { Toaster } from 'react-hot-toast';
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
             <Home />
             <About />
             <Certificates />
+            <Internship />
             <Education />
             <Languages />
             <Projects />
